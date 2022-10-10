@@ -3,7 +3,7 @@ public:
     string reverseParentheses(string s) {
         stack<char> st;
         int n=s.size();
-        string temp="";
+        string temp="",temp1="";
         for(int i=0;i<n;i++) {
             if(s[i]==')') {
                 while(st.top()!='(') {
@@ -23,10 +23,10 @@ public:
             }
         }        
         while(!st.empty()) {
-            temp=st.top()+temp;
+            temp1+=st.top();
             st.pop();
         }
-        //reverse(temp.begin(),temp.end());
-        return temp;
+        reverse(temp1.begin(),temp1.end());
+        return temp1+temp;
     }
 };
