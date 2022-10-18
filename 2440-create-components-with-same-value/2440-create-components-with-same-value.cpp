@@ -29,7 +29,7 @@ public:
             if(sum%i==0) {
                 vector<int> visited(n,0);
                 if(!DFS(0,sum/i,nums,adj,visited)) {
-                    Max_element=i-1;                  
+                    Max_element=max(Max_element,i-1);                  
                 }
             }
         }        
