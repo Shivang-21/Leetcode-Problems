@@ -11,9 +11,7 @@ public:
                 return digits;
         }
         if(carry) {
-            reverse(digits.begin(),digits.end());
-            digits.push_back(carry);
-            reverse(digits.begin(),digits.end());
+            digits.insert(digits.begin(),carry);
         }            
         return digits;
     }
