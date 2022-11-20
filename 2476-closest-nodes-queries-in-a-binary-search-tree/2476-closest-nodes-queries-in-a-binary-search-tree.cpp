@@ -30,15 +30,12 @@ public:
                 Min_ele=arr[Max-1];
             }
             else {
+                Max_ele=arr[Max];
                 if(arr[Max]==i) {
-                    Min_ele=i;
-                    Max_ele=i;
+                    Min_ele=arr[Max];                    
                 }
-                else {
-                    Max_ele=arr[Max];
-                    if(Max!=0) {
-                        Min_ele=arr[Max-1];
-                    }
+                else if(Max!=0){
+                    Min_ele=arr[Max-1];                   
                 }
             }
             ans.push_back({Min_ele,Max_ele});
