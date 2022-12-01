@@ -12,7 +12,7 @@ class Solution {
 public:
     void traverse(ListNode* head,int &Max) {
         if(!head->next) {
-            Max=max(Max,head->val);
+            Max=head->val;
             return;
         }
         traverse(head->next,Max);
